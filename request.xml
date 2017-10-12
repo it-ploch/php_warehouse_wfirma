@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this XML custom request changes default wFirma.pl listed products limit to 1000 -->
+<api>
+	<goods>
+		<parameters>
+			<limit>1000</limit>
+		</parameters>
+	</goods>
+</api>
