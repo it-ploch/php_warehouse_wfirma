@@ -9,11 +9,11 @@
 		<?php
 		
 			// general settings		
-			$debug_mode = true;										// debug mode active (true) or inactive (false)
+			$debug_mode = true;						// debug mode active (true) or inactive (false)
 			$query = 'https://api2.wfirma.pl/goods/find';			// query address to generate XML file with products from wFirma.pl warehouse
-			$requestFile = 'request.xml';							// optional file with additional XML request
-			$userName = 'user@domain';								// Your wFirma.pl username 
-			$password = 'pass';										// Your wFirma.pl password
+			$requestFile = 'request.xml';					// optional file with additional XML request
+			$userName = 'user@domain';					// Your wFirma.pl username 
+			$password = 'pass';						// Your wFirma.pl password
 		
 			// read additional parameters for XML request from file if exists
 			if ((strlen($requestFile) > 0) && file_exists($requestFile) ) {
