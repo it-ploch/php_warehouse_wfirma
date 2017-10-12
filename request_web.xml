@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this XML custom request changes default wFirma.pl listed products limit to 1000 -->
+<!-- this XML custom request filters products that are marked in wFirma.pl with specific label -->
+<api>
+    <goods>
+        <parameters>
+			<conditions>
+				<condition>
+					<field>tags</field>
+					<operator>like</operator>
+					<value>%xxxxx%</value>			<!-- replace xxxxx with label (tag) index number in wFirma.pl system --!>
+				</condition>
+			</conditions>
+            <limit>1000</limit>
+        </parameters>
+    </goods>
+</api>
