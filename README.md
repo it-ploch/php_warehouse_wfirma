@@ -5,4 +5,4 @@ PHP script that allows to present on Your website stocks avaliable in warehouse 
 - [ ] wFirma.pl API errors and exceptions support
 - [x] validation if custom XML request file exists
 - [x] "debug mode" to track XML requests
-- [ ] list only products with "web" flag in wFirma.pl system
+- [x] list only products with "web" flag in wFirma.pl system
