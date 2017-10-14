@@ -34,6 +34,8 @@
 		
 			// convert recieved XML file from string to SimpleXML Object
 			$xml = simplexml_load_string($result);
+		
+			$status = $xml->status->code;
 	
 			// debug mode window
 			if ($debug_mode == true) {
@@ -51,13 +53,22 @@
 					echo 'XML file converted to XML Object:';		
 						echo '<textarea disabled style="width: 99%; height: 100px">';
 							print_r($xml);
-						echo '</textarea>';	
+						echo '</textarea>';
+					echo 'XML communication status';		
+						echo '<textarea disabled style="width: 99%; height: 100px">';
+							print_r($xml->status->code);
+						echo '</textarea>';
 				echo '</code></td></tr></table>';
 			}
 		
 			// just simple data presentation of products from wFirma.pl warehouse including product name, quantity, unit and netto price
-			foreach($xml->goods->good as $good) {
-				echo '| '.$good->name.'|'.$good->count.'|'.$good->unit.'|'.$good->netto.'|<br>';
+			if ($status == 'OK') {
+				foreach($xml->goods->good as $good) {
+					echo '| '.$good->name.'|'.$good->count.'|'.$good->unit.'|'.$good->netto.'|<br>';
+				}
+			}
+			else {
+				echo 'query error';
 			}
 		?>
 	</body>
