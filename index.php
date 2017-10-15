@@ -69,9 +69,11 @@
 		
 			// just simple data presentation of products from wFirma.pl warehouse including product name, quantity, unit and netto price
 			if ($status == 'OK') {
+				echo '<table><tr><td>name</td><td>quantity></td><td>unit</td><td>netto price</td>';
 				foreach($xml->goods->good as $good) {
-					echo '| '.$good->name.'|'.$good->count.'|'.$good->unit.'|'.$good->netto.'|<br>';
+					echo '<tr><td>'.$good->name.'</td><td>'.$good->count.'</td><td>'.$good->unit.'</td><td>'.$good->netto.'</td></tr>';
 				}
+				echo '</table>';
 			}
 			else {
 				echo 'query error';
