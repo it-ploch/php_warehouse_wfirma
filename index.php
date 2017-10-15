@@ -3,7 +3,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="author" content="IT PLOCH"
+		<meta name="author" content="IT PLOCH">
 		<title>apitester</title>
 	</head>
 	<body>
