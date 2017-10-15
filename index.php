@@ -8,7 +8,12 @@
 	</head>
 	<body>
 		<?php
-		
+			// start generation time measurment
+			$time = microtime();
+			$time = explode(' ', $time);
+			$time = $time[1] + $time[0];
+			$start = $time;
+
 			// general settings		
 			$debug_mode = true;						// debug mode active (true) or inactive (false)
 			$query = 'https://api2.wfirma.pl/goods/find';			// query address to generate XML file with products from wFirma.pl warehouse
@@ -71,6 +76,14 @@
 			else {
 				echo 'query error';
 			}
+
+			// display generation time
+			$time = microtime();
+			$time = explode(' ', $time);
+			$time = $time[1] + $time[0];
+			$finish = $time;
+			$total_time = round(($finish - $start), 4);
+			echo '<br><b>Page generated in '.$total_time.' seconds.';
 		?>
 	</body>
 </html>
